@@ -44,7 +44,7 @@ After installation run the command
 
 ```
 mvn clean install
-java -jar .\target\jpachinook-0.0.1-SNAPSHOT.jar --server.port=8080 --spring.profiles.active=sqlite
+java -jar .\target\publication-0.0.1-SNAPSHOT.jar --server.port=8080 --spring.profiles.active=sqlite
 ```
 
 ## active profiles
