@@ -1,0 +1,155 @@
+{
+	"info": {
+		"_postman_id": "21464b32-f95c-44f1-8542-f42c97b47538",
+		"name": "publication",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "book",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{serverAuth}}/publication/book/",
+					"host": [
+						"{{serverAuth}}"
+					],
+					"path": [
+						"publication",
+						"book",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "author",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{serverAuth}}/publication/author/",
+					"host": [
+						"{{serverAuth}}"
+					],
+					"path": [
+						"publication",
+						"author",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "authorPaged",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{serverAuth}}/publication/author/paged?page=0&size=10&sort=nome",
+					"host": [
+						"{{serverAuth}}"
+					],
+					"path": [
+						"publication",
+						"author",
+						"paged"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "0"
+						},
+						{
+							"key": "size",
+							"value": "10"
+						},
+						{
+							"key": "sort",
+							"value": "nome"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "authorById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{serverAuth}}/publication/author/1",
+					"host": [
+						"{{serverAuth}}"
+					],
+					"path": [
+						"publication",
+						"author",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nome\":\"lorenzo\",\r\n    \"cognome\":\"grosso\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{serverAuth}}/publication/author/",
+					"host": [
+						"{{serverAuth}}"
+					],
+					"path": [
+						"publication",
+						"author",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addAll",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    {\r\n        \"nome\":\"mario\",\r\n        \"cognome\":\"grosso\"\r\n    },\r\n    {\r\n        \"nome\":\"gabriele\",\r\n        \"cognome\":\"grosso\"\r\n    },\r\n    {\r\n        \"nome\":\"benedetta\",\r\n        \"cognome\":\"grosso\"\r\n    }\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{serverAuth}}/publication/author/addAll",
+					"host": [
+						"{{serverAuth}}"
+					],
+					"path": [
+						"publication",
+						"author",
+						"addAll"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

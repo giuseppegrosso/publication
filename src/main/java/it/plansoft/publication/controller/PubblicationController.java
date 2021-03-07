@@ -1,0 +1,18 @@
+package it.plansoft.publication.controller;/* ggrosso created on 07/03/2021 inside the package - it.plansoft.publication.controller.interfaces */
+
+import it.plansoft.publication.controller.interfaces.BaseCrudController;
+import it.plansoft.publication.model.Pubblication;
+import it.plansoft.publication.repository.PubblicationRepository;
+import it.plansoft.publication.service.PubblicationService;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+@RequestMapping("/pubblication")
+public class PubblicationController extends BaseCrudController<PubblicationService, PubblicationRepository, Pubblication, Long> {
+
+    public PubblicationController(PubblicationService service) {
+        super(service);
+    }
+
+}
