@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-//@RequiredArgsConstructor
 public class BaseCrudDtoController<
         SERVICE extends BaseCrudDtoService,
         REPOSITORY extends JpaRepository<MODEL, ID>,

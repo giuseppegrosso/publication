@@ -16,7 +16,6 @@ import java.util.List;
 import java.util.Optional;
 
 @NoArgsConstructor
-//@RequiredArgsConstructor
 public class BaseCrudDtoService
         <
                 REPOSITORY extends JpaRepository<MODEL, ID>,
