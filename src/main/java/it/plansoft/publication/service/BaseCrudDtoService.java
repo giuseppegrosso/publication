@@ -20,7 +20,7 @@ public class BaseCrudDtoService
         <
                 REPOSITORY extends JpaRepository<MODEL, ID>,
                 MAPPER extends IMapper<DTO, MODEL>,
-                DTO extends BaseDto<ID>,
+                DTO extends BaseId<ID>,
                 MODEL extends BaseId<ID>,
                 ID> implements ICrudDtoService<DTO, ID
         > {

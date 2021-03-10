@@ -17,7 +17,7 @@ public class BaseCrudDtoController<
         SERVICE extends BaseCrudDtoService,
         REPOSITORY extends JpaRepository<MODEL, ID>,
         MAPPER extends IMapper<DTO, MODEL>,
-        DTO extends BaseDto<ID>,
+        DTO extends BaseId<ID>,
         MODEL extends BaseId<ID>,
         ID>
         implements ICrudDtoController<DTO, ID> {

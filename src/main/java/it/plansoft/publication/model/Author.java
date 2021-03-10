@@ -26,8 +26,15 @@ public class Author extends BaseId<Long> {
     @Column(name = "cognome")
     private String cognome;
 
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "publication_id")
     private Pubblication publication;
 
+    public Pubblication getPublication() {
+        return publication;
+    }
+
+    public void setPublication(Pubblication publication) {
+        this.publication = publication;
+    }
 }
