@@ -1,11 +1,9 @@
 package it.plansoft.publication.service;/* ggrosso created on 21/02/2021 inside the package - it.plansoft.demojpa.service */
 
-import it.plansoft.publication.dto.BaseDto;
 import it.plansoft.publication.mapper.IMapper;
 import it.plansoft.publication.model.BaseId;
 import it.plansoft.publication.service.interfaces.ICrudDtoService;
 import lombok.NoArgsConstructor;
-import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.Pageable;
@@ -80,7 +78,7 @@ public class BaseCrudDtoService
     public void deleteById(ID id) {
         // read
         Optional<MODEL> m = repository.findById(id);
-        if (m.isEmpty()) {
+        if (m == null) {
             throw new RuntimeException(String.format("Entity with id %s not found", id));
         }
 
@@ -92,7 +90,7 @@ public class BaseCrudDtoService
         // read
         MODEL min = this.mapper.dtoToModel(dto);
         Optional<MODEL> m = repository.findById(min.getId());
-        if (m.isEmpty())
+        if (m == null)
             throw new RuntimeException(String.format("Entity with id %s not found", min.getId()));
 
         MODEL mm = repository.save(m.get());
@@ -116,7 +114,7 @@ public class BaseCrudDtoService
     }
 
     private DTO convertModelToDto(Optional<MODEL> model) {
-        if (model != null && !model.isEmpty() && model.get() != null)
+        if (model != null && model.get() != null)
             return this.mapper.toDto(model.get());
 
         Optional<DTO> dto = Optional.empty();

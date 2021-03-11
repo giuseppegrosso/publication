@@ -11,8 +11,8 @@ import java.time.LocalDate;
 import java.util.Date;
 import java.util.Set;
 
-@Entity(name = "Pubblication")
-@Table(name = "pubblication")
+@Entity(name = "Publication")
+@Table(name = "publication")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
